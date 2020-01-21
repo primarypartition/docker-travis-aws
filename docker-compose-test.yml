@@ -1,0 +1,9 @@
+version: '3'
+services:
+  testweb:
+    build:
+      context: .
+      dockerfile: 'Dockerfile.test'
+    volumes:
+      - /app/node_modules
+      - .:/app

@@ -1,0 +1,3 @@
+FROM devapp
+
+CMD ["npm", "run", "test"]
