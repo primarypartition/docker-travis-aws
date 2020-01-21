@@ -9,4 +9,17 @@ before_install:
 script:
   - docker run testapp npm run test -- --coverage
 
+deploy: 
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-project"
+  env: "DockerProject-env"
+  bucket_name: "elasticbeanstalk-us-east-2-600621371902"
+  bucket_path: "docker-project"
+  on: 
+   branch: master
+
+
+
+
 
